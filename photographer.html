@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fisheye - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fisheye - Portfolio du photographe">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a class="header-link" href="./index.html" aria-label="Lien vers la page d'accueil">
+      <img src="assets/images/logo.png" class="header-logo" alt="Fisheye Logo">
+    </a>
+  </header>
+
+  <main>
+  </main>
+
+  <footer>
+  </footer>
+
+  <dialog class="modal" id="contactModal" aria-hidden="true">
+    <header class="modal-header">
+      <h2 class="modal-title">Contactez-moi</h2>
+      <button class="modal-close" aria-label="Bouton de fermeture du modal de contact" id="modalCloseBtn">
+        <img class="modal-close-img" src="assets/icons/close-white.svg" alt="White close button icon">
+      </button>
+    </header>
+    <form class="modal-form" id="modalForm">
+      <label class="modal-label" for="firstName">Prénom</label><br>
+      <input class="modal-input" type="text" id="firstName" name="firstName" minlength="2" pattern="(?!^ +$)^.+$"
+        required><br>
+
+      <label class="modal-label" for="lastName">Nom</label><br>
+      <input class="modal-input" type="text" id="lastName" name="lastName" minlength="2" pattern="(?!^ +$)^.+$"
+        required><br>
+
+      <label class="modal-label" for="email">E-mail</label><br>
+      <input class="modal-input" type="email" id="email" name="email" required><br>
+
+      <label class="modal-label" for="message">Votre message</label><br>
+      <input class="modal-input modal-msg" type="text" id="message" name="message" minlength="10" maxlength="100"
+        pattern="(?!^ +$)^.+$" required><br>
+
+      <button class="button modal-submit" aria-label="Bouton de soumission du formulaire du modal de contact"
+        id="submitButton" type="submit">Envoyer</button>
+    </form>
+  </dialog>
+
+  <dialog class="lightbox" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-container">
+
+      <div class="lightbox-grid1">
+        <button class="lightbox-previous" aria-label="Bouton précédent du modal de lightbox" id="lightboxPreviousBtn">
+          <em class="fa-solid fa-chevron-left"></em>
+        </button>
+      </div>
+
+      <figure class="lightbox-grid2 lightbox-media" id="lightboxMedia"></figure>
+
+      <div class="lightbox-grid3">
+        <button class="lightbox-close" aria-label="Bouton de fermeture du modal de lightbox" id="lightboxCloseBtn">
+          <img class="lightbox-close-img" src="assets/icons/close-red.svg" alt="Red close button icon">
+        </button>
+        <button class="lightbox-next" aria-label="Bouton suivant du modal de lightbox" id="lightboxNextBtn">
+          <em class="fa-solid fa-chevron-right"></em>
+        </button>
+      </div>
+
+
+
+    </div>
+  </dialog>
+
+
+  <script type="module" src="scripts/pages/photographer.js"></script>
+  <script src="https://kit.fontawesome.com/f4acb9b2fc.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

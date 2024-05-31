@@ -1,0 +1,148 @@
+/* style.css */
+
+/* Import des autres fichiers CSS */
+@import url('home.css');
+@import url('lightbox.css');
+@import url('media.css');
+@import url('modal.css');
+@import url('photographer.css');
+
+/* Styles principal */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1023px) {
+  body {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    width: 95%;
+  }
+}
+
+main {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1023px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+}
+@media only screen and (max-width: 1023px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header-link {
+  text-decoration: none;
+}
+.header-logo {
+  height: 6rem;
+}
+@media only screen and (max-width: 1023px) {
+  .header-logo {
+    margin: 1em 0;
+  }
+}
+
+dialog {
+  border: none;
+}
+.red {
+  outline: red 1px solid;
+}
+
+.blue {
+  outline: blue 1px solid;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Animations et media queries */
+@media only screen and (max-width: 1365px) {
+  html {
+    font-size: calc(62.5% - 0.3vw);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important; /* 1 */
+    animation-duration: 1ms !important; /* 1 */
+    animation-iteration-count: 1 !important; /* 1 */
+    background-attachment: initial !important; /* 2 */
+    scroll-behavior: auto !important; /* 3 */
+    transition-delay: 0s !important; /* 4 */
+    transition-duration: 0s !important; /* 4 */
+  }
+}
